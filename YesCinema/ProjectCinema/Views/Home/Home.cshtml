@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YesCinema</title>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+
+
+    <style>
+        .nopadding {
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .FirstRow {
+            margin-top: 55px;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-top: 5px;
+        }
+
+        .Notify {
+            background-color: red;
+            height: 30px;
+        }
+
+            .Notify p {
+                color: #ffffff;
+                font-weight: bold;
+                text-align: center;
+            }
+
+        .flex-container {
+            width: 100%;
+            min-height: 300px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+            .flex-container .column {
+                padding: 10px;
+                width: 50%;
+                flex: 1;
+            }
+    </style>
+
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5">
+        <a class="navbar-brand" href="/">YesCinema</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link active" href="/?Length=4">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="~/Home/MovieGallery">Movie gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="~/Registration/Login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="~/Registration/Register">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Body Main Start-->
+    <div class="container-fluid nopadding">
+
+        <!--First Content Start-->
+        <div class="container-fluid FirstRow">
+            <div class="row">
+            </div>
+        </div>
+
+        <div class="container-fluid p-0 pt-1">
+            <!--<img src="Content/Images/ImageCine.jpg" class="img-fluid" alt="01">-->
+            <img src="~/Home/GetImage/ImageCine" class="img-fluid" alt="01">
+        </div>
+
+
+        <div class="container-fluid EmptyRow">
+            <div class="row">
+            </div>
+        </div>
+
+        <!--Three Images in a Row -->
+
+        <div class="container-fluid EmptyRow">
+            <div class="row">
+            </div>
+        </div>
+
+
+
+        <!--<div class="container-fluid PaddingBottom">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2>Follow Us On</h2>
+            </div>
+            <div class="col-12 social">
+                <a href="#"><img src="~/Home/GetImage/facebook" class="img-fluid" /></a>
+                <a href="#"><img src=~/Home/GetImage/twitter" class="img-fluid" /></a>
+                <a href="#"><img src="~/Home/GetImage/googleplus" class="img-fluid" /></a>
+                <a href="#"><img src="~/Home/GetImage/instagram" class="img-fluid" /></a>
+                <a href="#"><img src="~/Home/GetImage/youtube" class="img-fluid" /></a>
+            </div>
+        </div>
+    </div>-->
+
+        <footer>
+            <div class="text-center">
+                <hr class="bg-light" />
+                <p>&copy; 2020 - YesCinema</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+    <script src="Scripts/jquery-3.5.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+
+
+
+</body>
+</html>
+

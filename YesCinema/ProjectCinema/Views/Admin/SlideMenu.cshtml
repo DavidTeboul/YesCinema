@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ProjectCinema.Models.MenuItem>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/themes/base/css")
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <header>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Menu Item</h4>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+
+                    @if (Model != null)
+                    {
+
+                        foreach (var item in Model)
+                        {
+
+                            <li class="list-group-item"><a href="@item.Link" class="btn btn-primary btn-block">@item.LinkName</a></li>
+
+                        }
+                    }
+                    <li class="list-group-item"><a href="http://google.com" class="btn btn-success btn-block">Google</a></li>
+                    <li class="list-group-item"><a href="http://technotipstutorial.blogspot.com" class="btn btn-warning btn-block">Official Blog</a></li>
+
+
+
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <footer>
+        <div>
+            <div>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+            </div>
+        </div>
+    </footer>
+    <a href="@Url.Action("Login","Registration")" class="btn btn-warning">Logout</a>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    <script>
+        $("#tabs").tabs({ active: false });
+    </script>
+</body>
+</html>
+

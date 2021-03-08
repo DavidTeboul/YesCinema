@@ -1,0 +1,24 @@
+﻿@model ProjectCinema.Models.Seat
+@{
+    ViewBag.Title = "ReservePlave";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ReservePlace</h2>
+
+
+@using (Html.BeginForm("Reserve", "Home", FormMethod.Post, new { id = "popupForm" }))
+{
+    @Html.HiddenFor(a => a.Range)
+    @Html.HiddenFor(a => a.Number)
+    @Html.HiddenFor(a => a.date)
+    @Html.HiddenFor(a => a.Hall)
+    @Html.HiddenFor(a => a.reserve)
+    @Html.HiddenFor(a => a.IdSeat)
+
+
+
+    <div>
+        <input type="submit" value="Confirm" />
+    </div>
+}

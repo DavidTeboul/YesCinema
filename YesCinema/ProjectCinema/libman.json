@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "twitter-bootstrap@4.5.3",
+      "destination": "lib/twitter-bootstrap/"
+    },
+    {
+      "library": "jquery@3.5.1",
+      "destination": "lib/jquery/"
+    }
+  ],
+
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  },
+  "Stripe": {
+    "ApiKey": "pk_test_51IBdSWDWDKekhuzU8ugwBKdi1vQeKGY5FsP5uofixyEBYx9J6ss5EC3vs1w2KKofmQ3FCzmETQgQ3kVtMcIE236Q001Rb3NDnI",
+    "PublishableKey": "sk_test_51IBdSWDWDKekhuzUVxX9rB2TPGH6NmjoyTm1r1TNreP35K6KzaouSjoQXWSYZYSBjRpLT27ZPhxu6XduJfxb32TD00XUgJlAFx"
+  }
+
+}

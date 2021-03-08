@@ -1,0 +1,67 @@
+﻿@model ProjectCinema.ViewModel.itemCartViewModel
+
+
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Showtime
+            </th>
+            <th>
+                Seat
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Quantity
+            </th>
+        </tr>
+
+        @foreach (var item in Model.ITEMS)
+        {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOVIENAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SHOWTIME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COST)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        </td>
+        
+
+        <td>
+
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+        }
+
+    </table>
+    <p>
+        <a href="@Url.Action("MovieGallery", "Home")">Continue Shopping</a>
+    </p>
+    <p>
+        <a href="@Url.Action("Index","Payment")">Checkout</a>
+    </p>
+</body>

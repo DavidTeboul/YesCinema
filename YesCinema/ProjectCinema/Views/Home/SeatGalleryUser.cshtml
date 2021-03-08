@@ -1,0 +1,63 @@
+﻿﻿@model  ProjectCinema.ViewModel.userSeatViewModel
+@using ProjectCinema.Models;
+@using ProjectCinema.ViewModel;
+
+
+@{
+    ViewBag.Title = "Seat Gallery";
+}
+
+
+<h2>SeatGallery</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Date
+            </th>
+            <th>
+                Hall
+            </th>
+            <th>
+                Range
+            </th>
+            <th>
+                Number
+            </th>
+            <th>
+                Reserve
+            </th>
+
+
+
+        </tr>
+    </thead>
+
+
+
+    @foreach (var item in Model.Seats)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.date)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Hall)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Range)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Number)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.reserve)
+    </td>
+    <td>
+        @Html.ActionLink("Confirm", "Reserve", new { id = item.IdSeat }) |
+    </td>
+
+</tr>
+    }
+
+</table>

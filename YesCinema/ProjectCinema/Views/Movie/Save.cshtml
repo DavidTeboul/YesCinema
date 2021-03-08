@@ -1,0 +1,55 @@
+﻿
+@model ProjectCinema.Models.Movie
+
+<h2>Save</h2>
+
+@using (Html.BeginForm("Save", "Movie", FormMethod.Post, new { id = "popupForm" }))
+{
+    @Html.HiddenFor(a => a.ID)
+    <div class="form-group">
+        <hr />
+        <label> moviePicture </label>
+        @Html.TextBoxFor(a => a.moviePicture, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.moviePicture)
+    </div>
+    <div class="form-group">
+
+        <label> name </label>
+        @Html.TextBoxFor(a => a.name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.name)
+    </div>
+    <div class="form-group">
+
+        <label> price </label>
+        @Html.TextBoxFor(a => a.price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.price)
+    </div>
+    <div class="form-group">
+
+        <label> showtime </label>
+        @Html.TextBoxFor(a => a.showtime, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.showtime)
+    </div>
+    <div class="form-group">
+
+        <label> SALLE </label>
+        @Html.TextBoxFor(a => a.SALLE, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.SALLE)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ageLimitation, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ageLimitation, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ageLimitation, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    @Html.ActionLink("Return To Menu", "SlideMenu", "Admin")
+
+
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+}

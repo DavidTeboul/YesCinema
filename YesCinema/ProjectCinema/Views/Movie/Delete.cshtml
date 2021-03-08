@@ -1,0 +1,53 @@
+﻿@model ProjectCinema.Models.Movie
+
+@{
+    ViewBag.Title = "MovieGallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MovieGallery</h2>
+
+
+@using (Html.BeginForm("Delete", "Movie", FormMethod.Post, new { id = "popupForm" }))
+{
+    @Html.HiddenFor(a => a.ID)
+    <div class="form-group">
+        <label> Name</label>
+        <p>@Model.name</p>
+    </div>
+
+    <div class="form-group">
+        <label>price</label>
+        <p>@Model.price</p>
+    </div>
+
+    <div class="form-group">
+        <label>SALLE</label>
+        <p>@Model.SALLE</p>
+    </div>
+
+    <div class="form-group">
+        <label>showtime</label>
+        <p>@Model.showtime</p>
+    </div>
+
+    <div class="form-group">
+        <label>ageLimitation</label>
+        <p>@Model.ageLimitation</p>
+    </div>
+    <div class="form-group">
+        <label>moviePicture</label>
+        <p>@Model.moviePicture</p>
+    </div>
+
+    <div>
+        <input type="submit" value="Delete" />
+    </div>
+
+    @Html.ActionLink("Return To Menu", "SlideMenu", "Admin")
+
+}
+
+
+
+

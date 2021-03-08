@@ -1,0 +1,30 @@
+﻿
+@model ProjectCinema.Models.Hall
+
+<h2>Save</h2>
+
+@using (Html.BeginForm("Save", "Admin", FormMethod.Post, new { id = "popupForm" }))
+{
+    @Html.HiddenFor(a => a.IDHall)
+    <div class="form-group">
+        <hr />
+        <label> Hall ID </label>
+        @Html.TextBoxFor(a => a.IDHall, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.IDHall)
+    </div>
+
+    <div class="form-group">
+        <hr />
+        <label> NumberOfseat </label>
+        @Html.TextBoxFor(a => a.NumberOfseat, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.NumberOfseat)
+    </div>
+
+
+
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+}
+@Html.ActionLink("Return To Menu", "SlideMenu", "Admin")
+

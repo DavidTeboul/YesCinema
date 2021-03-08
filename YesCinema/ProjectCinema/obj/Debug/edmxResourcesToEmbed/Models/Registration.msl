@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ManageRegisterStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="REGISTER">
+      <EntityTypeMapping TypeName="ManageRegister.REGISTER">
+        <MappingFragment StoreEntitySet="REGISTER">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="CONFIRMPASS" ColumnName="CONFIRMPASS" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
